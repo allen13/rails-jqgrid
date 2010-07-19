@@ -22,6 +22,15 @@ module ActionView
       opt[:rowNum] ||= 10
       opt[:rowList] ||= [100,200,300]
       opt[:viewrecords] ||= true
+      opt[:ondblClickRow] ||= %Q(#
+      function(rowId, iRow, iCol, e)
+      {
+        if(rowId)
+        {
+          window.location = '#{url_for(:controller => model.name.pluralize,:action => 'show')}' + '/' + rowId;
+        }
+      }
+      )
       #Default Grid opt End
       
       opt[:pager_opt] = {}
@@ -56,6 +65,7 @@ module ActionView
           );
           
           main_grid.filterToolbar();
+          
         });
         </script>
         <table id="#{opt[:id]}" class="scroll ui-state-default" cellpadding="0" cellspacing="0"></table>
