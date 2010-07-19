@@ -1,13 +1,31 @@
-RailsJqgrid
+Rails jqGrid
 ===========
 
-Introduction goes here.
+This is a rails plugin dedicated to the great jqGrid javascript widget. I had the two rails concepts in mind when I created it, "DRY it up" and "Convention over configuration". I managed to get jqGrid to work with two lines of code ( one if you don't count the styling). A standard set of grid options has already been defined, so all you really need to do is give it a model. Enjoy :-)
 
+Usage Instructions:
 
-Example
+//For the grid theme
+<%= jqgrid_theme("theme-name") %>
+//For the grid
+<%= jqgrid(Model,[optional standard jqGrid options here])) %>
+
+Example (The odd HTML is Hobo DRYML)
 =======
 
-Example goes here.
+#index.dryml
 
+<index-page>
+	<content-header:>
+		<%= jqgrid_theme("pepper-grinder") %>
+	</content-header:>
+	
+	<content-body:>
+		
+		<%= jqgrid(Log,:fields =>"exercise_type,duration_in_mins,date") %><br/>
 
+	</content-body:>
+</index-page>
+
+=======
 Copyright (c) 2010 [name of plugin creator], released under the MIT license
