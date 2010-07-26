@@ -1,5 +1,5 @@
 Rails jqGrid
-===========
+============
 
 This is a rails plugin dedicated to the great jqGrid javascript widget. I had two rails concepts in mind when I created it, "DRY it up" and "Convention over configuration". I managed to get jqGrid to work with two lines of code ( one if you don't count the styling). A standard set of grid options has already been defined, so all you really need to do is give it a model. Enjoy :-)
 
