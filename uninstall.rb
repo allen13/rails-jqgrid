@@ -10,7 +10,7 @@ FileUtils.rm_rf(
   :verbose => true
 )
 
-FileUtils.cp(
+FileUtils.rm_rf(
   File.join(RAILS_ROOT,"public/stylesheets/jqgrid"),
   :verbose => true
 )
